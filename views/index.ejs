@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Messages</title>
+</head>
+<body>
+<h1 style="color: #4d5d5d">Here are all the messages</h1>
+
+
+<% messages.forEach((message)=>{ %>
+    <p><%= message.user%></p>
+        <button style="background-color: #54b2b2;height: 35px; width: 75px ;border-radius: 20px; color:#313660" onclick="window.location.href=
+        '/detail?user=<%message.user%>&date=<% message.added%>&text=<% message.text%>'">View</button>
+    <br>
+<br>
+<% }) %>
+<a href="/new">Send a new message</a>
+</body>
+</html>
