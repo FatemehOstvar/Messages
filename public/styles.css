@@ -1,5 +1,5 @@
 :root {
-    background-color: beige;
+    background-color: #a3d3d8;
 }
 
 a{
@@ -9,13 +9,13 @@ a{
 }
 
 button{
-height: 35px; width: 75px; border-radius: 20px; color: #8b91c8
+height: 35px; width: 75px; border-radius: 20px; border: none; background-color: #def8f8;
 }
 #date{
     opacity: 50%;
 }
 textarea:hover, textarea:focus{
-    border: 6px dashed #54b2b2;
+    border: 6px dashed #7dbfd7;
 }
 
 input, textarea{
@@ -30,6 +30,6 @@ form, div{
     gap: 20px;
 }
 .div{
-    border: 4px solid #b6a9d9;
+    border: 4px solid #7dbfd7;
     border-radius: 10px;
 }
