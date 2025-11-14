@@ -7,5 +7,9 @@
     "express": "^5.1.0",
     "prettier": "^3.6.2",
     "prettier-plugin-ejs": "^1.0.3"
-  }
+  },
+  "scripts": {
+  "start": "node server.js"
+}
+
 }
