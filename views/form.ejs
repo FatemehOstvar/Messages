@@ -1,9 +1,24 @@
-<form action="/new" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Message</title>
 
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
 
+  <form action="/new" method="POST">
     <label for="author-name">author:</label>
-    <input type="text" id="author-name" name = 'author' required>
+    <textarea  type="text" id="author-name" name="author" required>
+</textarea>
     <label for="message-text">message:</label>
-    <input type="text" id="message-text" name="message" required>
-    <button type="submit">Send message</button>
-</form>
+    <textarea  type="text" id="message-text" name="message" required>
+</textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <a href="/">back</a>
+
+</body>
+</html>

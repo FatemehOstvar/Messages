@@ -4,13 +4,24 @@
     <title>Messages</title>
 </head>
 <body>
-<h1 style="color: #4d5d5d">Here are all the messages</h1>
+<h1 style="color: #4d5d5d; text-align: center">Messages</h1>
 
 
 <% messages.forEach((message)=>{ %>
+    <div class="div">
     <p><%= message.user%></p>
-        <button style="background-color: #54b2b2;height: 35px; width: 75px ;border-radius: 20px; color:#313660" onclick="window.location.href=
-        '/detail?user=<%message.user%>&date=<% message.added%>&text=<% message.text%>'">View</button>
+        <form action="/detail" method="POST" style="display:inline;">
+  <input type="hidden" name="user" value="<%= message.user %>">
+  <input type="hidden" name="date" value="<%= message.added %>">
+  <input type="hidden" name="text" value="<%= message.text %>">
+
+
+  <button
+    type="submit">
+    View
+  </button> </div>
+</form>
+
     <br>
 <br>
 <% }) %>

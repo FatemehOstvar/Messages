@@ -18,10 +18,12 @@ const messages = [
 const express = require("express");
 const {join} = require("node:path");
 const app= express();
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.urlencoded({ extended: true }));
-// app.js
-const assetsPath = join(__dirname, "public");
-app.use(express.static(assetsPath));
+
 
 app.set("view engine", "ejs");
 app.get('/', (req, res) => {
@@ -31,6 +33,9 @@ app.get('/new', (req, res) => {
     res.render('form');
 })
 
+app.post('/detail', (req, res) => {
+    res.render('detail',{user: req.body.user, text:req.body.text, date: req.body.date});
+})
 app.post('/new', (req, res) => {
     console.log(req.body);
     messages.push({text : req.body['message'], user : req.body['author'], added: new Date()});
