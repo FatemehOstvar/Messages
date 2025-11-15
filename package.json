@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
-    "node": "^25.2.0"
+    "node": "^25.2.0",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "express": "^5.1.0",
@@ -9,7 +12,6 @@
     "prettier-plugin-ejs": "^1.0.3"
   },
   "scripts": {
-  "start": "node --watch app.js"
-}
-
+    "start": "node --watch app.js"
+  }
 }

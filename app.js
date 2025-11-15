@@ -1,22 +1,5 @@
-const messages = [
-  {
-    text: "Hi there",
-    user: "Jon",
-    added: new Date()
-  },
-  {
-    text: "Hello World",
-    user: "Setareh",
-    added: new Date()
-  },
-    {
-        text: "I miss you",
-        user: "Johnson",
-        added: new Date()
-    }
-];
+
 const express = require("express");
-const {join} = require("node:path");
 const app= express();
 const path = require('path');
 
